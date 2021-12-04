@@ -14,14 +14,14 @@ function ReviewFeedback(){
     const history = useHistory();
 
     const reviewFeedback = {
-        feeling: `${addFeeling.feeling}`,
-        understanding: `${addUnderstand.understanding}`,
-        support: `${addSupport.support}`,
-        comments: `${addComment.comments}`
+        feeling: `${addFeeling}`,
+        understanding: `${addUnderstand}`,
+        support: `${addSupport}`,
+        comments: `${addComment}`
     }
 
     const submitFeedback = ()=> {
-        console.log('In POST 1');
+        console.log('In POST 1', reviewFeedback );
         axios({
             method:'POST',
             url:'/postReview',
