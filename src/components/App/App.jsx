@@ -5,7 +5,12 @@ import { useDispatch } from 'react-redux';
 import './App.css';
 import FeelingFeedback from '../FeelingFeedback/FeelingFeedback';
 
+
+
 function App() {
+  const dispatch = useDispatch();
+
+  
 
   return (
     <div className='App'>
@@ -16,6 +21,9 @@ function App() {
       </header>
         <Route exact path="/">
          <FeelingFeedback />
+        </Route>
+        <Route exact path="/ReviewFeedback">
+          <ReviewFeedback />
         </Route>
       </Router>
     </div>

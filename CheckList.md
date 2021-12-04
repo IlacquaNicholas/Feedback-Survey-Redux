@@ -4,7 +4,7 @@
 
 [ ] Build a DB called "prime_feedback" and create sql and table from data.sql
 
-[ ] Set up the App.jsx page with the different components. 
+[x] Set up the App.jsx page with the different components. 
 - wrap them in the routes
 - 
 

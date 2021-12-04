@@ -13,7 +13,7 @@ function FeelingFeedback (){
             type: 'ADD_FEELING',
             payload: feelingInput
         })
-        // history.push('/feedbackEnd')
+        history.push('/ReviewFeedback')
     }
 
 
