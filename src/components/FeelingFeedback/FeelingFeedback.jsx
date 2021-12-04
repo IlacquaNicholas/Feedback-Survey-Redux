@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 
 function FeelingFeedback (){
-    const [feelingInput, setFeelingInput] = useState('0');
+    const [feelingInput, setFeelingInput] = useState('');
     const dispatch = useDispatch();
     const history = useHistory();
 
@@ -13,7 +13,7 @@ function FeelingFeedback (){
             type: 'ADD_FEELING',
             payload: feelingInput
         })
-        history.push('/review')
+        history.push('/understanding')
     };
 
 

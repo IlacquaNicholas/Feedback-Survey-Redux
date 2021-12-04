@@ -4,7 +4,11 @@ import { HashRouter as Router, Route} from "react-router-dom";
 import { useDispatch } from 'react-redux';
 import './App.css';
 import FeelingFeedback from '../FeelingFeedback/FeelingFeedback';
+import UnderStandingFeedback from '../UnderstandingFeedback/UnderstandingFeedback';
+import SupportFeedback from '../SupportFeedback/SupportFeedback';
+import CommentFeedback from '../CommentFeedback/CommentFeedback';
 import ReviewFeedback from '../ReviewFeedback/ReviewFeedback';
+
 
 
 
@@ -24,13 +28,13 @@ function App() {
          <FeelingFeedback />
         </Route>
         <Route exact path="/understanding">
-          <ReviewFeedback />
+          <UnderStandingFeedback />
         </Route>
         <Route exact path="/supported">
-          <ReviewFeedback />
+          <SupportFeedback />
         </Route>
         <Route exact path="/comments">
-          <ReviewFeedback />
+          <CommentFeedback />
         </Route>
         <Route exact path="/review">
           <ReviewFeedback />

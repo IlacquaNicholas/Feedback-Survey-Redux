@@ -14,13 +14,39 @@ const feelingReducer = (state = [], action) =>{
         return action.payload;
     }
     return state;
-}
+};
+const understandReducer = (state = [], action) =>{
+    if (action.payload === 'ADD_UNDERSTAND') {
+        console.log(action);
+        return action.payload;
+    }
+    return state;
+};
+const supportReducer = (state = [], action) => {
+    if (action.payload === 'ADD_SUPPORT') {
+        console.log(action);
+        return action.payload;
+    }
+    return state;
+};
+const commentReducer = (state = [], action) => {
+    if (action.payload === 'ADD_COMMENT') {
+        console.log(action);
+        return action.payload;
+    }
+    return state;
+};
+
+
 
 
 //This is the Store for the reducers 
 const storeInstance = createStore(
     combineReducers({
-        feelingReducer
+        feelingReducer,
+        understandReducer,
+        supportReducer,
+        commentReducer
     }),
     applyMiddleware(logger),
 );
