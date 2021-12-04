@@ -8,8 +8,8 @@
 - wrap them in the routes
 - 
 
-[ ] Start the first component "Feeling" and try to get this one to work first then set up all the Feedback components. 
- - Input field for the Feeling 1-5.
+[x] Start the first component "Feeling" and try to get this one to work first then set up all the Feedback components. 
+ - Input field for the Feeling 1-10.
     * This will also need to be sent to the Redux store.
     * Use a reducer. 
  - Next button

@@ -23,6 +23,15 @@ function App() {
         <Route exact path="/">
          <FeelingFeedback />
         </Route>
+        <Route exact path="/understanding">
+          <ReviewFeedback />
+        </Route>
+        <Route exact path="/supported">
+          <ReviewFeedback />
+        </Route>
+        <Route exact path="/comments">
+          <ReviewFeedback />
+        </Route>
         <Route exact path="/review">
           <ReviewFeedback />
         </Route>

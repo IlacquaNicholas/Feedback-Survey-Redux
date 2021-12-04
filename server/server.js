@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
 const { Pool } = require('pg');
+const router = express.Router();
 const PORT = process.env.PORT || 5000;
 
 /** ---------- MIDDLEWARE ---------- **/
@@ -10,7 +11,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static('build'));
 
 /** ---------- EXPRESS ROUTES ---------- **/
-app.post('/review', (req, res)=>{
+router.post('/review', (req, res)=>{
     console.log('in POST /review');
     console.log('req.body:', req.body);
     const reviewTask = req.body

@@ -5,11 +5,11 @@ import axios from 'axios';
 
 
 function ReviewFeedback(){
-    const addFeeling = useSelector(store => store.feelingFeedback)
+    const addFeeling = useSelector(store => store.feelingReducer)
     const history = useHistory();
-    
+
     const reviewFeedback = {
-        feeling: addFeeling.feeling
+        feeling: `${addFeeling.feeling}`
     }
 
     const submitFeedback = ()=> {

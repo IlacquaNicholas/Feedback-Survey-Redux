@@ -8,7 +8,7 @@ import logger from 'redux-logger';
 import { createStore, combineReducers, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 
-const feelingFeedback = (state = [], action) =>{
+const feelingReducer = (state = [], action) =>{
     if (action.payload === 'ADD_FEELING'){
         console.log(action);
         return action.payload;
@@ -20,7 +20,7 @@ const feelingFeedback = (state = [], action) =>{
 //This is the Store for the reducers 
 const storeInstance = createStore(
     combineReducers({
-        feelingFeedback
+        feelingReducer
     }),
     applyMiddleware(logger),
 );
