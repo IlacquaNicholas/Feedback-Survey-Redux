@@ -5,10 +5,12 @@ import axios from 'axios';
 
 
 function ReviewFeedback(){
+
     const addFeeling = useSelector(store => store.feelingReducer)
     const addUnderstand = useSelector(store => store.understandReducer)
     const addSupport = useSelector(store => store.supportReducer)
     const addComment = useSelector(store => store.commentReducer)
+
     const history = useHistory();
 
     const reviewFeedback = {
@@ -19,14 +21,15 @@ function ReviewFeedback(){
     }
 
     const submitFeedback = ()=> {
+        console.log('In POST 1');
         axios({
             method:'POST',
-            url:'/review',
+            url:'/#/review',
             data: reviewFeedback
         }).then((response)=>{
             console.log('in POST Review', response);
         }).catch((error)=>{
-            console.log(error);
+            console.log('In error on sending to DB',error);
         })
         history.push('/')
     }
@@ -35,10 +38,10 @@ function ReviewFeedback(){
     return(
         <div>
             <h1>Review Your Feedback</h1>
-            <h4>Feeling Feedback: {addFeeling.feeling}</h4>
-            <h4>Understanding Feedback: {addUnderstand.understanding}</h4>
-            <h4>Support Feedback: {addSupport.support}</h4>
-            <h4>Comments Feedback: {addComment.comments}</h4>
+            <h4>Feeling Feedback: {addFeeling}</h4>
+            <h4>Understanding Feedback: {addUnderstand}</h4>
+            <h4>Support Feedback: {addSupport}</h4>
+            <h4>Comments Feedback: {addComment}</h4>
             <button onClick={submitFeedback}>Submit</button>
         </div>
 

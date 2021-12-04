@@ -9,30 +9,30 @@ import { createStore, combineReducers, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 
 const feelingReducer = (state = [], action) =>{
-    if (action.payload === 'ADD_FEELING'){
-        console.log(action);
-        return action.payload;
+    switch (action.type){
+        case 'ADD_FEELING':
+            return action.payload;
     }
     return state;
 };
 const understandReducer = (state = [], action) =>{
-    if (action.payload === 'ADD_UNDERSTAND') {
-        console.log(action);
-        return action.payload;
+    switch (action.type) {
+        case 'ADD_UNDERSTAND':
+            return action.payload;
     }
     return state;
 };
 const supportReducer = (state = [], action) => {
-    if (action.payload === 'ADD_SUPPORT') {
-        console.log(action);
-        return action.payload;
+    switch (action.type) {
+        case 'ADD_SUPPORT':
+            return action.payload;
     }
     return state;
 };
 const commentReducer = (state = [], action) => {
-    if (action.payload === 'ADD_COMMENT') {
-        console.log(action);
-        return action.payload;
+    switch (action.type) {
+        case 'ADD_COMMENT':
+            return action.payload;
     }
     return state;
 };

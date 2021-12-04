@@ -3,7 +3,9 @@ const app = express();
 const bodyParser = require('body-parser');
 const { Pool } = require('pg');
 const router = express.Router();
+const pool = require ('./modules/pool')
 const PORT = process.env.PORT || 5000;
+
 
 /** ---------- MIDDLEWARE ---------- **/
 app.use(bodyParser.json()); 
@@ -11,10 +13,10 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static('build'));
 
 /** ---------- EXPRESS ROUTES ---------- **/
-router.post('/review', (req, res)=>{
+router.post('/#/review', (req, res)=>{
     console.log('in POST /review');
     console.log('req.body:', req.body);
-    const reviewTask = req.body
+    const reviewTask = req.body;
     const sqlText = `
     INSERT INTO "feedback" 
     ("feeling", "understanding", "support", "comments")
@@ -27,9 +29,9 @@ router.post('/review', (req, res)=>{
         reviewTask.support, 
         reviewTask.comments
     ];
-    Pool.query(sqlText, sqlValue)
+    pool.query(sqlText, sqlValue)
     .then((dbResult)=>{
-        console.log('INSET success');
+        console.log('INSET success',dbResult);
         res.sendStatus(200);
     })
     .catch((dbErr)=>{
