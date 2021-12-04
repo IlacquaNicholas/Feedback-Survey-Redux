@@ -6,10 +6,10 @@ import axios from 'axios';
 
 function ReviewFeedback(){
 
-    const addFeeling = useSelector(store => store.feelingReducer)
-    const addUnderstand = useSelector(store => store.understandReducer)
-    const addSupport = useSelector(store => store.supportReducer)
-    const addComment = useSelector(store => store.commentReducer)
+    const addFeeling = useSelector((store)=> store.feelingReducer)
+    const addUnderstand = useSelector((store) => store.understandReducer)
+    const addSupport = useSelector((store) => store.supportReducer)
+    const addComment = useSelector((store) => store.commentReducer)
 
     const history = useHistory();
 
@@ -24,7 +24,7 @@ function ReviewFeedback(){
         console.log('In POST 1');
         axios({
             method:'POST',
-            url:'/#/review',
+            url:'/postReview',
             data: reviewFeedback
         }).then((response)=>{
             console.log('in POST Review', response);
