@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 
 function FeelingFeedback (){
-    const [feelingInput, setFeelingInput] = useState();
+    const [feelingInput, setFeelingInput] = useState('0');
     const dispatch = useDispatch();
     const history = useHistory();
 
@@ -13,8 +13,8 @@ function FeelingFeedback (){
             type: 'ADD_FEELING',
             payload: feelingInput
         })
-        history.push('/ReviewFeedback')
-    }
+        history.push('/review')
+    };
 
 
 
@@ -31,11 +31,11 @@ function FeelingFeedback (){
             />
         </div>
         <div>
-                <button onClick={addFeelingFeedback}>NEXT</button>
+            <button onClick={addFeelingFeedback}>NEXT</button>
         </div>
         </>
 
     )
-}
+};
 
 export default FeelingFeedback;

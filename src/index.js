@@ -11,8 +11,9 @@ import { Provider } from 'react-redux';
 const feelingFeedback = (state = [], action) =>{
     if (action.payload === 'ADD_FEELING'){
         console.log(action);
-        return action.payload
+        return action.payload;
     }
+    return state;
 }
 
 

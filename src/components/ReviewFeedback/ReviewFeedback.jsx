@@ -7,6 +7,7 @@ import axios from 'axios';
 function ReviewFeedback(){
     const addFeeling = useSelector(store => store.feelingFeedback)
     const history = useHistory();
+    
     const reviewFeedback = {
         feeling: addFeeling.feeling
     }
@@ -27,6 +28,8 @@ function ReviewFeedback(){
 
     return(
         <div>
+            <h1>Review Your Feedback</h1>
+            <h4>Feeling Feedback: {addFeeling.feeling}</h4>
             <button onClick={submitFeedback}>Submit</button>
         </div>
 

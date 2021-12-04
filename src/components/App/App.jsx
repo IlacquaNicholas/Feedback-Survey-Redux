@@ -1,9 +1,10 @@
 import axios from 'axios';
-import React, { useState, useEffect } from 'react';
-import { HashRouter as Router, Route, Link } from "react-router-dom";
+import React from 'react';
+import { HashRouter as Router, Route} from "react-router-dom";
 import { useDispatch } from 'react-redux';
 import './App.css';
 import FeelingFeedback from '../FeelingFeedback/FeelingFeedback';
+import ReviewFeedback from '../ReviewFeedback/ReviewFeedback';
 
 
 
@@ -22,7 +23,7 @@ function App() {
         <Route exact path="/">
          <FeelingFeedback />
         </Route>
-        <Route exact path="/ReviewFeedback">
+        <Route exact path="/review">
           <ReviewFeedback />
         </Route>
       </Router>
