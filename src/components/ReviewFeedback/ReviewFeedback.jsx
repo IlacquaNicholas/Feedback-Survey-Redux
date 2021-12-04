@@ -27,7 +27,8 @@ function ReviewFeedback(){
             url:'/postReview',
             data: reviewFeedback
         }).then((response)=>{
-            console.log('in POST Review', response);
+            console.log('in POST response', response);
+            
         }).catch((error)=>{
             console.log('In error on sending to DB',error);
         })
