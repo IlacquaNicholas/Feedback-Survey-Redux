@@ -25,9 +25,6 @@ function FeelingFeedback (){
     return(
         <>
         <div>
-            <h1>In the next four pages please leave a rating from 1-5,
-                5 meaning great and 1 meaning not great and leaving a comment on the fourth page.
-            </h1>
             <h2>How are you feeling today?</h2>
             <h3>Feeling?</h3>
             <input 
