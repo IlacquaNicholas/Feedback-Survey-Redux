@@ -10,10 +10,13 @@ function SupportFeedback (){
 
     const addSupportFeedback = () => {
         console.log('in addFeeling dispatch', supportInput);
+        if (supportInput == ''){
+            return alert("Please add your support from 1-5")
+        }else {
         dispatch({
             type: 'ADD_SUPPORT',
             payload: supportInput
-        })
+        })}
         history.push('/comments')
     };
 
@@ -26,7 +29,7 @@ function SupportFeedback (){
                     value={supportInput}
                     type='number'
                     onChange={(event) => { setSupportInput(event.target.value) }}
-                    placeholder="Feeling 1-10"
+                    placeholder="Feeling 1-5"
                 />
             </div>
             <div>

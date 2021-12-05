@@ -32,7 +32,7 @@ function ReviewFeedback(){
         }).catch((error)=>{
             console.log('In error on sending to DB',error);
         })
-        history.push('/')
+        history.push('/thankyou')
     }
 
 

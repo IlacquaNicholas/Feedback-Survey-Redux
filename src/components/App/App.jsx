@@ -8,6 +8,7 @@ import UnderStandingFeedback from '../UnderstandingFeedback/UnderstandingFeedbac
 import SupportFeedback from '../SupportFeedback/SupportFeedback';
 import CommentFeedback from '../CommentFeedback/CommentFeedback';
 import ReviewFeedback from '../ReviewFeedback/ReviewFeedback';
+import ThankyouPage from '../ThankyouPage/ThankyouPage';
 
 
 
@@ -38,6 +39,9 @@ function App() {
         </Route>
         <Route exact path="/review">
           <ReviewFeedback />
+        </Route>
+        <Route exact path="/thankyou">
+          <ThankyouPage />
         </Route>
       </Router>
     </div>

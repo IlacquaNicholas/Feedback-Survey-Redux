@@ -10,10 +10,13 @@ function CommentFeedback (){
 
     const addCommentFeedback = () => {
         console.log('in addFeeling dispatch', commentInput);
+        if (commentInput === ''){
+            return alert("Please leave your comment")
+        }else {
         dispatch({
             type: 'ADD_COMMENT',
             payload: commentInput
-        })
+        })}
         history.push('/review')
     };
 

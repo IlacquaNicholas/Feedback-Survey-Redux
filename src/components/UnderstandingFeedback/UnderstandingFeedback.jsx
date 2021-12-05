@@ -9,10 +9,13 @@ function UnderStandingFeedback (){
 
     const addUnderstandFeedback = () => {
         console.log('in addFeeling dispatch', understandInput);
+        if (understandInput == '') {
+            return alert("Please add your understanding from 1-5")
+        } else{
         dispatch({
             type: 'ADD_UNDERSTAND',
             payload: understandInput
-        })
+        })}
         history.push('/supported')
     };
 
@@ -25,7 +28,7 @@ function UnderStandingFeedback (){
                     value={understandInput}
                     type='number'
                     onChange={(event) => { setUnderstandInput(event.target.value) }}
-                    placeholder="Feeling 1-10"
+                    placeholder="Feeling 1-5"
                 />
             </div>
             <div>

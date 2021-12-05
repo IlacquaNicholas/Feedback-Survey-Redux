@@ -9,10 +9,14 @@ function FeelingFeedback (){
 
     const addFeelingFeedback = () =>{
         console.log('in addFeeling dispatch', feelingInput );
+
+        if (feelingInput === ''){
+            return alert("Please add how your support from 1-5")
+        }else{
         dispatch({
             type: 'ADD_FEELING',
             payload: feelingInput
-        })
+        })}
         history.push('/understanding')
     };
 
@@ -27,7 +31,7 @@ function FeelingFeedback (){
             value={feelingInput}
             type = 'number'
             onChange={(event) => { setFeelingInput(event.target.value) }}
-            placeholder = "Feeling 1-10"
+            placeholder = "Feeling 1-5"
             />
         </div>
         <div>
