@@ -20,8 +20,8 @@ function App() {
         <h1 className='App-title'>Feedback!</h1>
         <h4>Don't forget it!</h4>
         
-          <li>In the next four pages please leave a rating from 1-5,
-            5 meaning great and 1 meaning not great and leaving a comment on the fourth page.</li>
+          <li>In the first three pages please leave a rating from 1-5,
+            5 meaning great and 1 meaning not great and the fourth page you will leave a comment.</li>
           <li>The last page will give you a review of your results</li>
       </header>
         <Route exact path="/">
